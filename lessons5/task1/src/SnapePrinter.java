@@ -21,8 +21,7 @@ public class SnapePrinter  {
         s.print(snape2);
         s.print(snape3);
 
-        System.out.println("sdfsdf");
-        System.out.println("sdfsdf");
+
     }
 
 
