@@ -8,4 +8,6 @@ public class Cat implements LandAnimal {
     public String speak() {
         return "Meow";
     }
+
+
 }

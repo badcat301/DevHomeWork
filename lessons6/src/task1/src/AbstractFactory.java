@@ -6,4 +6,5 @@ package task1.src;
 public interface AbstractFactory {
     SeaAnimal[] getSeaAnimal();
     LandAnimal[] getLandAnimal();
+
 }

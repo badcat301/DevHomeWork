@@ -7,5 +7,6 @@ public class Lion implements LandAnimal{
     @Override
     public String speak() {
         return "Roar";
+        return "Roar";
     }
 }
