@@ -7,7 +7,10 @@ public class Sea implements AbstractFactory {
 
 
     @Override
-    public SeaAnimal getSeaAnimal() {
-       return new Shark();
+    public SeaAnimal[] getSeaAnimal() {
+     SeaAnimal[] seaAnimals = {new Shark(),new Octopus()};
+
+        return seaAnimals;
     }
+
 }
