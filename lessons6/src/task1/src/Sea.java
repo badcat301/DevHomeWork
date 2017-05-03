@@ -3,7 +3,7 @@ package task1.src;
 /**
  * Created by Fylhtq on 03.05.2017.
  */
-public class Sea implements AbstractFactory {
+public  class Sea implements AbstractFactory {
 
 
     @Override
@@ -11,6 +11,11 @@ public class Sea implements AbstractFactory {
      SeaAnimal[] seaAnimals = {new Shark(),new Octopus()};
 
         return seaAnimals;
+    }
+
+    @Override
+    public LandAnimal[] getLandAnimal() {
+        return null;
     }
 
 }
