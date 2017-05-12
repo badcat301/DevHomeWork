@@ -10,7 +10,23 @@ import java.util.stream.Stream;
 /**
  * Created by Fylhtq on 10.05.2017.
  */
-public class MyCustomArrayList  implements Collection {
+public class MyCustomArrayList<E> implements Collection {
+char[]a;
+int size =0;
+    Object element[];
+    public MyCustomArrayList() {
+    }
+
+    public int  get(int index) {
+        return a[index];
+    }
+    public void add(int index, E e) {
+       if(size ==element.length)
+       {
+           element[size++] = e;
+       }
+    }
+
     @Override
     public int size() {
         return 0;
@@ -37,11 +53,6 @@ public class MyCustomArrayList  implements Collection {
     }
 
     @Override
-    public Object[] toArray(Object[] a) {
-        return new Object[0];
-    }
-
-    @Override
     public boolean add(Object o) {
         return false;
     }
@@ -57,28 +68,8 @@ public class MyCustomArrayList  implements Collection {
     }
 
     @Override
-    public boolean removeIf(Predicate filter) {
-        return false;
-    }
-
-    @Override
     public void clear() {
 
-    }
-
-    @Override
-    public Spliterator spliterator() {
-        return null;
-    }
-
-    @Override
-    public Stream stream() {
-        return null;
-    }
-
-    @Override
-    public Stream parallelStream() {
-        return null;
     }
 
     @Override
@@ -96,5 +87,8 @@ public class MyCustomArrayList  implements Collection {
         return false;
     }
 
-
+    @Override
+    public Object[] toArray(Object[] a) {
+        return new Object[0];
+    }
 }

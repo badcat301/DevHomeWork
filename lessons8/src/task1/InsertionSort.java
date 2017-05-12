@@ -10,22 +10,18 @@ public class InsertionSort {
 
 
 
-    public static ArrayList insertionToSort(ArrayList<Integer> arr) {
-        int temp, j;
-        for (int i = 0; i < arr.size() - 1; i++) {
-            if (arr.get(i) > arr.get(i + 1)) {
-                temp = arr.get(i + 1);
-                arr.set(i,i+1);
-                j = i;
-                while (j > 0 && temp < arr.get(j - 1)) {
-                    arr.set(j - 1,temp);
-                    j--;
-                }
-
+    public static ArrayList insertionToSort(ArrayList<Integer> list) {
+        int i, j;
+        for (i = 0; i < list.size(); i++) {
+            Integer tmp = list.get(i);
+            j = i;
+            while ((j > 0) && (list.get(j -1) > tmp)){
+                list.set(j, list.get(j -1));
+                j--;
             }
-
+            list.set(j, tmp);
         }
-        return arr;
+        return list;
     }
 }
 

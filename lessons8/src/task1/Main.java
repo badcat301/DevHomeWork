@@ -17,10 +17,10 @@ public class Main {
         arr1.add(45);
         arr1.add(7);
         insertionToSort(arr1);
-        shakeSort(arr1);
+       // shakeSort(arr2);
         for (int i = 0; i <arr1.size() ; i++) {
             System.out.println(arr1.get(i));
-            System.out.println(arr2.get(i));
+           // System.out.println(arr2.get(i));
         }
 
     }
