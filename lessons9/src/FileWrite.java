@@ -1,6 +1,4 @@
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 
 /**
  * Created by Fylhtq on 15.05.2017.
@@ -10,22 +8,14 @@ public class FileWrite {
     {
 
         File file = new File(fileName);
-        try {
 
+        try ( BufferedWriter out = new BufferedWriter(new FileWriter(fileName))){
             if(!file.exists()){
                 file.createNewFile();
             }
 
-
-            PrintWriter out = new PrintWriter(file.getAbsoluteFile());
-
-            try {
-
-                out.print(text);
-            } finally {
-
-                out.close();
-            }
+            out.write(text);
+            out.close();
         } catch(IOException e) {
             throw new RuntimeException(e);
         }
@@ -33,5 +23,6 @@ public class FileWrite {
 
     }
 }
+
 
 
